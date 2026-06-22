@@ -1,0 +1,9 @@
+*.pth
+*.pkl
+/saved_models
+*.csv
+
+# Large data artifacts kept locally only (exceed GitHub file-size limits)
+data/*_network.json
+data/*.npz
+data/cache/

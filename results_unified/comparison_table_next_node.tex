@@ -1,0 +1,30 @@
+\begin{table}[h!]
+\centering
+\small
+\caption{Prediction accuracy and certainty for the next-node and auto-regressive tasks, averaged over 4 datasets. The Acceptable Node Horizon is the mean number of consecutive future nodes predicted in auto-regressive rollout while cumulative top-1 accuracy stays $\geq 75\%$ (higher $=$ longer reliable prediction). NLL is the mean negative log-likelihood of the realised next node (bits, lower $=$ more certain).}
+\label{tab:comparison_all}
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{lrr|rr}
+\toprule
+\multicolumn{1}{c}{} & \multicolumn{2}{c|}{\textbf{Next-node prediction}} & \multicolumn{2}{c}{\textbf{Auto-regressive rollout}} \\
+\textbf{Model} & \textbf{Acc@1}$\uparrow$ & \textbf{NLL (bits)}$\downarrow$ & \textbf{Acc. Node Horizon}$\uparrow$ & \textbf{Endpoint dist (km)}$\downarrow$ \\
+\midrule
+DM-MC2 & 0.9317 (0.0149) & 0.4180 (0.1233) & 12.91 (2.25) & 6.6260 (3.2003) \\
+DM-MC5 & 0.9447 (0.0129) & 0.3199 (0.1212) & 13.74 (2.11) & 5.9394 (3.0283) \\
+DM-MC10 & 0.9481 (0.0145) & \textbf{0.3048} (0.1336) & 14.92 (1.87) & 6.2238 (3.5434) \\
+\hline
+AKOM & 0.8829 (0.0593) & 2.1748 (1.6363) & 12.17 (1.83) & 5.5722 (2.3902) \\
+CPT & 0.9440 (0.0158) & 3.5694 (3.5015) & 13.48 (2.56) & 7.6176 (4.4197) \\
+IOHMM & 0.9322 (0.0125) & 5.0692 (4.8594) & 13.24 (1.63) & 6.7344 (3.0612) \\
+MOGEN & 0.9167 (0.0417) & 2.8384 (3.0315) & 14.96 (3.50) & \textbf{5.1624} (2.7636) \\
+\hline
+HW-MC2 & 0.9319 (0.0132) & 5.3098 (5.2426) & 13.40 (1.77) & 6.9689 (2.9839) \\
+HW-MC5 & 0.9450 (0.0110) & 3.7380 (3.7510) & 14.12 (2.17) & 6.8933 (4.1238) \\
+HW-MC10 & 0.9485 (0.0138) & 3.7757 (3.8109) & 16.27 (2.54) & 6.4454 (3.6223) \\
+MC2P & 0.9319 (0.0132) & 5.3098 (5.2426) & 13.40 (1.77) & 6.9689 (2.9839) \\
+MC5P & 0.9453 (0.0126) & 7.2539 (6.2935) & 14.42 (2.70) & 5.9068 (3.0154) \\
+MC10P & \textbf{0.9501} (0.0140) & 10.9647 (9.8026) & \textbf{17.37} (3.17) & 5.5376 (2.6208) \\
+\bottomrule
+\end{tabular}
+}%  end resizebox
+\end{table}
